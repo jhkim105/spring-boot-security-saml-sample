@@ -8,4 +8,4 @@ openssl s_client -host %IDP_HOST% -port %IDP_PORT% -prexit -showcerts < NUL | se
 keytool -delete -alias ssocircle -keystore %KEYSTORE_FILE% -storepass %KEYSTORE_PASSWORD%
 keytool -import -alias ssocircle -file %CERTIFICATE_FILE% -keystore %KEYSTORE_FILE% -storepass %KEYSTORE_PASSWORD% -noprompt
 
-::rm %CERTIFICATE_FILE%
+rm %CERTIFICATE_FILE%
